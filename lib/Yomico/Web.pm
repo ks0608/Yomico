@@ -109,6 +109,7 @@ sub render_static {
     #XXX
     $content_type = 'image/x-icon' if $file_path =~ m!\.ico$!;
     $content_type = 'text/css' if $file_path =~ m!\.css$!;
+    $content_type = 'text/javascript' if $file_path =~ m!\.js$!;
     my $content = file($file_path)->slurp;
     return [
         200,
@@ -145,7 +146,7 @@ sub is_markdown {
 
 sub is_static {
     my ( $self, $path_info ) = @_;
-    if( $path_info =~ m!^/(?:favicon\.ico$|images/.+|css/.+)! ) {
+    if( $path_info =~ m!^/(?:favicon\.ico$|images/.+|css/.+|js/.+)! ) {
         return $path_info;
     }
     return;

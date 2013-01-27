@@ -4,6 +4,9 @@
     <meta charset="utf-8">
     <title>Yomico... Yet Another Markdown Viewer</title>
     <link rel="stylesheet" href="/css/inuit.css" type="text/css"/>
+    <link rel="stylesheet" href="/css/github.css" type="text/css"/>
+    <script src="/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
     <style type="text/css">
       <!--
           body { color:#222; margin:20px 0 40px;
@@ -14,7 +17,7 @@
             margin:0 auto;
             padding:0 10px;
           }
-          pre { padding: 1em; border:1px solid #ccc; font-size: 14px; line-height:20px; }
+          pre { border:1px solid #ccc; font-size: 14px; line-height:20px; }
           blockquote { padding: 1em; font-style:italic; }
           blockquote p:last-of-type:after , blockquote p:before{ content: no-close-quote; }
         -->
