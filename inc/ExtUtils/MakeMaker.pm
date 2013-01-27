@@ -19,7 +19,7 @@ our @Overridable;
 my @Prepend_parent;
 my %Recognized_Att_Keys;
 
-our $VERSION = '6.62';
+our $VERSION = '6.63_02';
 $VERSION = eval $VERSION;
 
 # Emulate something resembling CVS $Revision$
@@ -614,6 +614,7 @@ END
         $self->catfile($Config{'archlibexp'}, "Config.pm")
     );
 
+    $self->init_tools();
     $self->init_others();
     $self->init_platform();
     $self->init_PERM();
@@ -730,7 +731,7 @@ EOP
 }
 
 
-#line 745
+#line 746
 
 sub _installed_file_for_module {
     my $class  = shift;
@@ -1135,4 +1136,4 @@ sub selfdocument {
 
 __END__
 
-#line 2882
+#line 2883
